@@ -1,6 +1,8 @@
 
 var cordova = require('cordova');
 
+var divId = '30bb429809a3415b857bcd0a4283bf05' //a guid to be (hopefully) sure of being unique
+
 module.exports = {
 	show:function(successCallback,errorCallback,data) {
         if (typeof Windows !== 'undefined' &&
@@ -25,7 +27,7 @@ module.exports = {
             var bodyElem = document.body;
             var loadingElem = document.createElement("div");
             loadingElem.setAttribute('style', 'position: fixed; z-index: 1; left:0; top:0; width:100%; height:100%; overflow: auto; text-align:center');
-            loadingElem.setAttribute('id', 'loadingDiv');
+            loadingElem.setAttribute('id', divId);
 
 
             var innerElem = document.createElement("div");
@@ -56,7 +58,7 @@ module.exports = {
                     typeof Windows.UI !== 'undefined' /* Check that we have a UI to work with */) {
                         
             //TODO: Support Desktop, Xbox, etc
-            var loadingDiv = document.getElementById("loadingDiv").remove();
+            var loadingDiv = document.getElementById(divId).remove();
         }
 	}
 
