@@ -2,7 +2,7 @@
 var cordova = require('cordova');
 
 module.exports = {
-	show:function(successCallback,errorCallback,strInput) {
+	show:function(successCallback,errorCallback,data) {
         if (typeof Windows !== 'undefined' &&
             typeof Windows.UI !== 'undefined' /* Check that we have a UI to work with */ &&
             typeof Windows.UI.ViewManagement.StatusBar !== 'undefined' /* Check that we have the StatusBar to work with*/) {
